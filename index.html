@@ -10,6 +10,8 @@
 
   <title>Frontend Mentor | IP Address Tracker</title>
 
+  <link rel="stylesheet" href="css/style.css">
+
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution {
@@ -28,13 +30,54 @@
   <!-- IP Address Tracker -->
 
   <!-- Search for any IP address or domain -->
+  <header>
+    <div class="container">
+      <h1 class="title">IP Address Tracker</h1>
+      <!-- IP Address -->
+      <div class="ip-input">
+        <input type="text" name="" id="" placeholder="Search for any IP address or domain">
+        <button><img src="images/icon-arrow.svg" alt=""></button>
+      </div>
+      <div class="result">
+        <!-- Location -->
+        <div class="tab ip-address">
+          <div class="content">
+            <h3 class="result-title">IP ADDRESS</h3>
+            <h2 class="data">192.212.174.101</h2>
+          </div>
 
-  <!-- IP Address -->
-  <!-- Location -->
-  <!-- Timezone -->
-  <!-- UTC add offset value dynamically using the API -->
-  <!-- ISP -->
+        </div>
+        <!-- Timezone -->
+        <div class="tab location">
+          <div class="content">
+            <h3 class="result-title">LOCATION</h3>
+            <h2 class="data">Brooklyn, NY 10001</h2>
+          </div>
 
+        </div>
+        <!-- UTC add offset value dynamically using the API -->
+        <div class="tab timezone">
+          <div class="content">
+            <h3 class="result-title">TIMEZONE</h3>
+            <h2 class="data">UTC -05:00</h2>
+          </div>
+
+        </div>
+        <!-- ISP -->
+        <div class="tab isp">
+          <div class="content">
+            <h3 class="result-title">ISP</h3>
+            <h2 class="data">SpaceX Starlink</h2>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </header>
+  <section class="map">
+
+  </section>
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.

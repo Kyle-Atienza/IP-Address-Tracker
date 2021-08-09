@@ -1,0 +1,127 @@
+@import 'config';
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    header{
+        flex: 0 1 35%;
+        background: url(/images/pattern-bg.png);
+        background-size: cover;
+        background-position: center;
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            width: 90vw;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            align-items: center;
+
+            .title{
+                color: $white;
+                padding: 1em 0;
+            }
+            .ip-input{
+                background: $white;
+                border-radius: .8em;
+                display: flex;
+                overflow: hidden;
+                position: relative;
+                width: Min(100%, 500px);
+
+                &>*{
+                    border: none;
+                    padding: .8em;
+                }
+                input{
+                    flex-grow: 1;
+                }
+                button{
+                    background: $dark;
+                    color: $white;
+                    aspect-ratio: 1/1;
+                }
+            }
+            .result{
+                background: $white;
+                position: absolute;
+                top: 155px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                // gap: 1em;
+                box-shadow: 0px 29px 100px -23px rgba(0, 0, 0, 0.25);
+                border-radius: 10px;
+                padding: 1em 0;
+
+                .tab{
+                    //padding: 0.5em 1.5em;
+
+                    .content{
+                    //padding: 1.5em 0;
+                    padding: .5em 0;
+
+                        .result-title{
+                            margin-bottom: .7em;
+                            color: $grey;
+                        }
+                        .data{
+                            overflow-wrap: break-word;
+                        }
+                    }
+                    
+                }
+                
+            }
+        }
+
+    }
+    .map{
+        flex: 1 1 65%;
+        background: $grey;
+    }
+
+    @media (min-width: 600px){
+
+        header{
+            .container{
+                .result{
+                    display: flex;
+                    flex-direction: row;
+                    //justify-content: space-between;
+                    text-align: left;
+                    width: 75vw;
+                    padding: 0;
+
+                    .tab{
+                        flex: 1;
+                        display: flex;
+                        justify-content: space-between;
+                        
+                        .content{
+                            text-align: left;
+                            padding: 1.5em 2em;
+                            flex-grow: 1;
+                            
+
+                        }
+                    }
+                    .tab:not(:last-child)::after{
+                        content: "";
+                        background: black;
+                        //position: absolute;
+                        left: 0;
+                        margin: auto 0 ;
+                        height: 50%;
+                        width: 1px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
