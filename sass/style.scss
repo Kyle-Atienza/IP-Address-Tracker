@@ -48,6 +48,9 @@ body{
                     display: grid;
                     place-items: center;
                 }
+                button:hover{
+                    background: $grey;
+                }
             }
             .result{
                 background: $white;
