@@ -10,9 +10,9 @@
 
   <title>Frontend Mentor | IP Address Tracker</title>
 
-  <link rel="stylesheet" href="css/style.css">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="css/style.css">
   <style>
     .attribution {
       font-size: 11px;
@@ -23,6 +23,15 @@
       color: hsl(228, 45%, 44%);
     }
   </style>
+
+  <!-- leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
 </head>
 
 <body>
@@ -35,15 +44,15 @@
       <h1 class="title">IP Address Tracker</h1>
       <!-- IP Address -->
       <div class="ip-input">
-        <input type="text" name="" id="" placeholder="Search for any IP address or domain">
-        <button><img src="images/icon-arrow.svg" alt=""></button>
+        <input type="text" name="" id="ip-input" placeholder="Search for any IP address or domain">
+        <button id="submit-ip"><img src="images/icon-arrow.svg" alt=""></button>
       </div>
       <div class="result">
         <!-- Location -->
         <div class="tab ip-address">
           <div class="content">
             <h3 class="result-title">IP ADDRESS</h3>
-            <h2 class="data">192.212.174.101</h2>
+            <h2 class="data" id="ip-data">192.212.174.101</h2>
           </div>
 
         </div>
@@ -51,7 +60,7 @@
         <div class="tab location">
           <div class="content">
             <h3 class="result-title">LOCATION</h3>
-            <h2 class="data">Brooklyn, NY 10001</h2>
+            <h2 class="data" id="location-data">Brooklyn, NY 10001</h2>
           </div>
 
         </div>
@@ -59,7 +68,7 @@
         <div class="tab timezone">
           <div class="content">
             <h3 class="result-title">TIMEZONE</h3>
-            <h2 class="data">UTC -05:00</h2>
+            <h2 class="data" id="timezone-data">UTC -05:00</h2>
           </div>
 
         </div>
@@ -67,7 +76,7 @@
         <div class="tab isp">
           <div class="content">
             <h3 class="result-title">ISP</h3>
-            <h2 class="data">SpaceX Starlink</h2>
+            <h2 class="data" id="isp-data">SpaceX Starlink</h2>
           </div>
 
         </div>
@@ -75,13 +84,18 @@
     </div>
 
   </header>
-  <section class="map">
+  <section class="map" id="map">
 
   </section>
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="script.js"></script>
+
+
 </body>
 
 </html>

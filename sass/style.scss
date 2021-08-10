@@ -45,6 +45,8 @@ body{
                     background: $dark;
                     color: $white;
                     aspect-ratio: 1/1;
+                    display: grid;
+                    place-items: center;
                 }
             }
             .result{
@@ -55,6 +57,7 @@ body{
                 box-shadow: 0px 29px 100px -23px rgba(0, 0, 0, 0.25);
                 border-radius: 10px;
                 padding: 1em 0;
+                z-index: 2;
 
                 .tab{
 
@@ -80,6 +83,9 @@ body{
     .map{
         flex: 1 1 100%;
         background: $grey;
+        //height: 180px;
+        z-index: 1;
+        
     }
 
     @media (min-width: 600px){
